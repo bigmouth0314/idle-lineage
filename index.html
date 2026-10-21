@@ -415,10 +415,13 @@
                     <div class="bg-slate-800 p-3 rounded-lg border border-slate-700">
                         <div class="flex flex-col gap-2">
                             <div class="flex justify-between items-center">
-                            <select id="set-pot" class="bg-slate-900 border border-slate-600 text-red-300 px-2 py-1 rounded text-sm w-28 outline-none" onchange="this.classList.remove('text-red-300', 'text-orange-300', 'text-white'); this.classList.add(this.value === 'potion_heal' ? 'text-red-300' : (this.value === 'potion_strong' ? 'text-orange-300' : 'text-white'));">
+                            <select id="set-pot" class="bg-slate-900 border border-slate-600 text-red-300 px-2 py-1 rounded text-sm w-36 outline-none" onchange="this.classList.remove('text-red-300', 'text-orange-300', 'text-white'); this.classList.add(['potion_heal','potion_ancient_heal'].includes(this.value) ? 'text-red-300' : (['potion_strong','potion_ancient_strong'].includes(this.value) ? 'text-orange-300' : 'text-white'));">
                             <option value="potion_heal" class="text-red-300">紅色藥水</option>
                             <option value="potion_strong" class="text-orange-300">橙色藥水</option>
                             <option value="potion_ult" class="text-white">白色藥水</option>
+                            <option value="potion_ancient_heal" class="text-red-300">古代紅水（0.5秒）</option>
+                            <option value="potion_ancient_strong" class="text-orange-300">古代橙水（0.5秒）</option>
+                            <option value="potion_ancient_ult" class="text-white">古代白水（0.5秒）</option>
                         </select>
                         <span class="text-sm">HP &lt; <input type="number" id="set-hp-pot" value="70" class="w-14 bg-slate-900 border border-slate-600 text-center text-white rounded">%</span>
                     </div>
@@ -556,41 +559,41 @@
     })();
     </script>
 
-    <script src="js/anim-manifest.js?pages-20261021-19"></script>
-    <script src="js/00-asset-route.js?pages-20261021-19"></script>
-    <script src="js/00-data.js?speed-items-20261021-18"></script>
-<script src="js/01-drops-config.js?speed-items-20261021-18"></script>
+    <script src="js/anim-manifest.js?pages-20261022-20"></script>
+    <script src="js/00-asset-route.js?pages-20261022-20"></script>
+    <script src="js/00-data.js?ancient-exp-20261022-20"></script>
+<script src="js/01-drops-config.js?ancient-exp-20261022-20"></script>
 <script src="js/02-stats-recompute.js?speed-items-20261021-18"></script>
-    <script src="js/03-combat-core.js?pages-20261021-19"></script>
-    <script src="js/04-combat-attack.js?pages-20261021-19"></script>
-<script src="js/05-kill-progression.js?pages-20261021-19"></script>
-    <script src="js/06-status-allies.js?merc-speed-20261021-19"></script>
-    <script src="js/07-skills-cast.js?speed-items-20261021-18"></script>
-<script src="js/08-items-equip.js?speed-items-20261021-18"></script>
-<script src="js/09-vfx-render.js?pages-20261021-19"></script>
-    <script src="js/10-ui-tabs.js?merc-speed-20261021-19"></script>
-<script src="js/11-world-map.js?pages-20261021-19"></script>
-<script src="js/12-npc-quests.js?pages-20261021-19"></script>
-<script src="js/13-shop-save.js?speed-items-20261021-18"></script>
+    <script src="js/03-combat-core.js?ancient-exp-20261022-20"></script>
+    <script src="js/04-combat-attack.js?pages-20261022-20"></script>
+<script src="js/05-kill-progression.js?pages-20261022-20"></script>
+    <script src="js/06-status-allies.js?ancient-exp-20261022-20"></script>
+    <script src="js/07-skills-cast.js?ancient-exp-20261022-20"></script>
+<script src="js/08-items-equip.js?ancient-exp-20261022-20"></script>
+<script src="js/09-vfx-render.js?pages-20261022-20"></script>
+    <script src="js/10-ui-tabs.js?ancient-exp-20261022-20"></script>
+<script src="js/11-world-map.js?pages-20261022-20"></script>
+<script src="js/12-npc-quests.js?pages-20261022-20"></script>
+<script src="js/13-shop-save.js?ancient-exp-20261022-20"></script>
 <script src="js/14-craft-pandora.js?speed-items-20261021-18"></script>
-<script src="js/15-cards.js?pages-20261021-19"></script>
-<script src="js/16-equip-book.js?pages-20261021-19"></script>
-<script src="js/18-misc-book.js?pages-20261021-19"></script>
-<script src="js/17-audio.js?pages-20261021-19"></script>
-<script src="js/19-equipment-window.js?pages-20261021-19"></script>
-<script src="js/20-warehouse-window.js?pages-20261021-19"></script>
-<script src="js/21-relic-book.js?pages-20261021-19"></script>
-    <script src="js/23-summons.js?pages-20261021-19"></script>
-    <script src="js/22-pets.js?pages-20261021-19"></script>
-    <script src="js/24-pandora-relic-market.js?pages-20261021-19"></script>
-    <script src="js/25-clan-system.js?pages-20261021-19"></script>
-    <script src="js/26-world-channel.js?pages-20261021-19"></script>
-<script src="js/28-pvp-arena.js?pages-20261021-19"></script>
-<script src="js/29-siege-v2-data.js?pages-20261021-19"></script>
-<script src="js/30-siege-v2.js?pages-20261021-19"></script>
-<script src="js/31-castle-guards.js?pages-20261021-19"></script>
-<script src="js/32-threat.js?pages-20261021-19"></script>
-<script src="js/33-cloud-save.js?pages-20261021-19"></script>
+<script src="js/15-cards.js?pages-20261022-20"></script>
+<script src="js/16-equip-book.js?pages-20261022-20"></script>
+<script src="js/18-misc-book.js?pages-20261022-20"></script>
+<script src="js/17-audio.js?pages-20261022-20"></script>
+<script src="js/19-equipment-window.js?pages-20261022-20"></script>
+<script src="js/20-warehouse-window.js?pages-20261022-20"></script>
+<script src="js/21-relic-book.js?pages-20261022-20"></script>
+    <script src="js/23-summons.js?pages-20261022-20"></script>
+    <script src="js/22-pets.js?pages-20261022-20"></script>
+    <script src="js/24-pandora-relic-market.js?pages-20261022-20"></script>
+    <script src="js/25-clan-system.js?pages-20261022-20"></script>
+    <script src="js/26-world-channel.js?pages-20261022-20"></script>
+<script src="js/28-pvp-arena.js?pages-20261022-20"></script>
+<script src="js/29-siege-v2-data.js?pages-20261022-20"></script>
+<script src="js/30-siege-v2.js?pages-20261022-20"></script>
+<script src="js/31-castle-guards.js?pages-20261022-20"></script>
+<script src="js/32-threat.js?pages-20261022-20"></script>
+<script src="js/33-cloud-save.js?pages-20261022-20"></script>
 </body>
 </html>
 
